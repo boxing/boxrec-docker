@@ -5,10 +5,11 @@ import {BoxerController} from './pages/boxer/boxer.controller';
 import {LoginController} from './pages/login/login.controller';
 import {RatingsController} from './pages/ratings/ratings.controller';
 import {ScheduleController} from './pages/schedule/schedule.controller';
+import { ResultsController } from './pages/results/results.controller';
 
 @Module({
     imports: [],
-    controllers: [LoginController, BoxerController, RatingsController, ScheduleController],
+    controllers: [LoginController, BoxerController, RatingsController, ScheduleController, ResultsController],
     providers: [],
 })
 export class AppModule implements NestModule {
