@@ -7,9 +7,9 @@ import {CustomRequest} from '../../middleware/check-if-logged-in.middleware';
 export class BoxerController {
 
     @Get(':id')
-    async findOne(@Req() req: CustomRequest, @Res() res: Response, @Param() params): Promise<any> {
-        const person = await boxrec.getPersonById(req.boxrecCustom.cookieJar, params.id);
-        res.send(person.output);
+    async findOne(@Req() req: CustomRequest, @Res() res: Response, @Param() params: { id: number }): Promise<any> {
+        const output = await boxrec.getPersonById(req.boxrecCustom.cookieJar, params.id);
+        res.send(output.output);
     }
 
 }
