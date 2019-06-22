@@ -1,8 +1,8 @@
 {
   "name": "boxrec-docker",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Docker version of the boxrec npm package",
-  "author": "",
+  "author": "Mike DiDomizio",
   "license": "MIT",
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
@@ -23,7 +23,7 @@
     "@nestjs/common": "^6.1.1",
     "@nestjs/core": "^6.1.1",
     "@nestjs/platform-express": "^6.1.1",
-    "boxrec": "^3.0.0",
+    "boxrec": "^4.0.1",
     "class-validator": "^0.9.1",
     "cookie-parser": "^1.4.4",
     "dotenv": "^6.2.0",
