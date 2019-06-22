@@ -4,7 +4,7 @@ import * as request from 'supertest';
 import {createTestModule} from '../../e2e-helpers';
 import {PHPSESSID, REMEMBERME} from '../../tests/e2e-setup';
 
-describe('Schedule Controller (E2E)', () => {
+describe('Results Controller (E2E)', () => {
     let app: INestApplication;
 
     beforeEach(async () => {
@@ -21,13 +21,13 @@ describe('Schedule Controller (E2E)', () => {
         await app.init();
     });
 
-    describe('get schedule for worldwide, all divisions and no tv specified', () => {
+    describe('get results for worldwide, all divisions', () => {
 
         let body: BoxrecScheduleOutput;
 
         it('should make a request and return 200', async () => {
             return request(app.getHttpServer())
-                .get('/schedule?countryCode=&division=&tv=')
+                .get('/results?countryCode=&division=')
                 .expect(200)
                 .expect((response) => {
                     body = response.body;
@@ -35,19 +35,12 @@ describe('Schedule Controller (E2E)', () => {
         });
 
         it('should return an array of events', () => {
-            expect(body.events.length).toBeGreaterThanOrEqual(1);
-        });
-
-        describe('events', () => {
-
-            it('should return a list of bouts', () => {
-                expect(body.events[0].bouts.length).toBeGreaterThanOrEqual(1);
-            });
-
+            expect(body.events.length).toBe(20);
         });
 
         it('should return the number of pages', () => {
-            expect(body.numberOfPages).toBeGreaterThanOrEqual(1);
+            // if this breaks, something has changed.  Last checked 2019-06-22
+            expect(body.numberOfPages).toBeGreaterThanOrEqual(237);
         });
 
     });
