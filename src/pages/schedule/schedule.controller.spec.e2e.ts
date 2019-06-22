@@ -1,21 +1,13 @@
 import {INestApplication} from '@nestjs/common';
-import {Test} from '@nestjs/testing';
 import {BoxrecScheduleOutput} from 'boxrec/dist/boxrec-pages/schedule/boxrec.page.schedule.constants';
 import * as request from 'supertest';
-import {AppModule} from '../../app.module';
+import {createTestModule} from '../../e2e-helpers';
 import {PHPSESSID, REMEMBERME} from '../../tests/e2e-setup';
 
 jest.setTimeout(30000);
 
 describe('Schedule Controller (E2E)', () => {
     let app: INestApplication;
-
-    function createTestModule() {
-        return Test.createTestingModule({
-            imports: [AppModule],
-            providers: [],
-        }).compile();
-    }
 
     beforeEach(async () => {
         app = (await createTestModule()

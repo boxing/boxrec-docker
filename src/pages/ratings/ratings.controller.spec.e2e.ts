@@ -1,19 +1,11 @@
 import {INestApplication} from '@nestjs/common';
-import {Test} from '@nestjs/testing';
 import {BoxrecRatingsOutput} from 'boxrec/dist/boxrec-pages/ratings/boxrec.ratings.constants';
 import * as request from 'supertest';
-import {AppModule} from '../../app.module';
+import {createTestModule} from '../../e2e-helpers';
 import {PHPSESSID, REMEMBERME} from '../../tests/e2e-setup';
 
 describe('Ratings Controller (E2E)', () => {
     let app: INestApplication;
-
-    function createTestModule() {
-        return Test.createTestingModule({
-            imports: [AppModule],
-            providers: [],
-        }).compile();
-    }
 
     beforeEach(async () => {
         app = (await createTestModule()

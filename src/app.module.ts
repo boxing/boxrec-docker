@@ -4,7 +4,7 @@ import {IsLoggedInMiddleware} from './middleware/check-if-logged-in.middleware';
 import {BoxerController} from './pages/boxer/boxer.controller';
 import {LoginController} from './pages/login/login.controller';
 import {RatingsController} from './pages/ratings/ratings.controller';
-import { ScheduleController } from './pages/schedule/schedule.controller';
+import {ScheduleController} from './pages/schedule/schedule.controller';
 
 @Module({
     imports: [],
