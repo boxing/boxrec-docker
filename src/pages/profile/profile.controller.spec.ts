@@ -5,7 +5,7 @@ import {AppModule} from '../../app.module';
 
 const {PHPSESSID, REMEMBERME} = process.env;
 
-describe('Boxer Controller', () => {
+describe('Profile Controller', () => {
     let app: INestApplication;
 
     function createTestModule() {
