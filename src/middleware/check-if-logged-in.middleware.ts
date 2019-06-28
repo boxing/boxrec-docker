@@ -1,4 +1,5 @@
 import {Injectable, NestMiddleware} from '@nestjs/common';
+import {BoxrecRole} from 'boxrec/dist/boxrec-pages/search/boxrec.search.constants';
 import {Request, Response} from 'express';
 import {CookieJar} from 'request';
 
@@ -44,5 +45,6 @@ export class IsLoggedInMiddleware implements NestMiddleware {
 export interface CustomRequest extends Request {
     boxrecCustom: {
         cookieJar: CookieJar,
+        profile?: BoxrecRole,
     };
 }
