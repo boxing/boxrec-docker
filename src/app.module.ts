@@ -7,10 +7,11 @@ import {ProfileController} from './pages/profile/profile.controller';
 import {RatingsController} from './pages/ratings/ratings.controller';
 import {ResultsController} from './pages/results/results.controller';
 import {ScheduleController} from './pages/schedule/schedule.controller';
+import { DateController } from './pages/date/date.controller';
 
 @Module({
     imports: [],
-    controllers: [LoginController, RatingsController, ScheduleController, ResultsController, ProfileController],
+    controllers: [LoginController, RatingsController, ScheduleController, ResultsController, ProfileController, DateController],
     providers: [],
 })
 export class AppModule implements NestModule {
