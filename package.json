@@ -22,7 +22,7 @@
   "dependencies": {
     "@nestjs/common": "^6.1.1",
     "@nestjs/core": "^6.1.1",
-    "@nestjs/platform-express": "^6.1.1",
+    "@nestjs/platform-express": "^6.11.11",
     "boxrec": "^4.0.1",
     "class-validator": "^0.9.1",
     "cookie-parser": "^1.4.4",
