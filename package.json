@@ -24,7 +24,7 @@
     "@nestjs/core": "^6.1.1",
     "@nestjs/platform-express": "^6.1.1",
     "boxrec": "^4.0.1",
-    "class-validator": "^0.9.1",
+    "class-validator": "^0.14.0",
     "cookie-parser": "^1.4.4",
     "dotenv": "^6.2.0",
     "reflect-metadata": "^0.1.12",
